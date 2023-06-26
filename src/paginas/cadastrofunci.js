@@ -174,7 +174,7 @@ function Cadastrofunci() {
             </select>
             {/*<input className="Input" type="text" name="funcao" id="funcao" placeholder="ex: Barbeiro" />*/}
             <p className="tituloInput">Celular</p>
-            <input className="Input" type="text" name="telefone" id="telefone" value={funcionario.nome}  placeholder="ex: (92) 9999-99999" onChange={handleChange} />
+            <input className="Input" type="text" name="telefone" id="telefone" value={funcionario.telefone}  placeholder="ex: (92) 9999-99999" onChange={handleChange} />
             </div>
          
           <div className='segundadiv'>
