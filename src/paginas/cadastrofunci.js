@@ -44,7 +44,7 @@ function Cadastrofunci() {
         const unidades = await unidadesService.getUnidades();
         setFormData(unidades.data);
         if (unidades.data.length > 0) {
-          if (formData.unidade == undefined) {
+          if (funcionario.unidade == undefined) {
             funcionario.unidade = formData[0]._id;
           }
         }
