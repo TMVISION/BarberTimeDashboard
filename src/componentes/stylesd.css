@@ -1,0 +1,74 @@
+.container{
+height: 620px;
+
+
+
+}
+
+
+.DataTable{
+width: 1080px;
+height: 620px;
+
+
+}
+
+
+
+.text-end {
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 50px;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .page-link {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination .page-link:hover {
+  background-color: #f8f9fa;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}

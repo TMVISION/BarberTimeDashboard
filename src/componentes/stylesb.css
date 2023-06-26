@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.buttonsMain{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+ 
+ 
+}
+
+.buttonsAll{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+
+  width: 650px;
+  height: 84px;
+
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.buttonsAll:hover{
+  background: #faf9f9;
+}
+
+.background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 44px;
+  width: 44px;
+  background: #F4F4F4;
+  border-radius: 8px;
+
+}
+
+.titleAll{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+
+.linkButton{
+
+  outline: none;
+  text-decoration: none;
+
+}
+
+.carousel {
+  display: flex;
+  scroll-snap-align: start;
+  overflow-x: auto;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}

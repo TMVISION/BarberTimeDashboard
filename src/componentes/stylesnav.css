@@ -1,0 +1,80 @@
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  width: 100%;
+  padding: 0px 20px;
+
+  background: #FFFFFF;
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+
+  background: #F2F2F2;    
+}
+
+.navLogo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoimg{
+  width: 79px;
+  height: 75px;
+}
+
+.logoTitulo{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 110%;
+  /* or 20px */
+
+  color: #333333;
+}
+
+.navLinks{
+  display: flex;
+  align-items: center;
+}
+
+.navUl{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+.linkNav{
+  text-decoration: none;
+border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+
+
+  color: #BDBDBD;;
+  background-color: #FFFFFF;
+}
+
+.linkNav:hover{
+  color: #000000;
+}
