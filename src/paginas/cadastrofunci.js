@@ -155,31 +155,31 @@ function Cadastrofunci() {
           <form className="areaInputt" onSubmit={handleSubmit}>
           <div className='primeiradiv'>
           <p className="tituloInput">Nome</p>
-            <input className="Input" type="text" name="nome" id="nome" placeholder="ex: José " onChange={handleChange}/>
+            <input className="Input" type="text" name="nome" id="nome" placeholder="ex: José " value={funcionario.nome} onChange={handleChange}/>
 
             <p className="tituloInput">E-mail</p>
-            <input className="Input" type="email" name="email" id="email" placeholder="ex:  Jose@gmail.com" onChange={handleChange}/>
+            <input className="Input" type="email" name="email" id="email" placeholder="ex:  Jose@gmail.com" value={funcionario.email} onChange={handleChange}/>
 
             <p className="tituloInput">CPF</p>
-            <input className="Input" type="number" name="cpf" id="cpf" placeholder="ex: 706.846.826-70" onChange={handleChange}/>
+            <input className="Input" type="number" name="cpf" id="cpf" placeholder="ex: 706.846.826-70" value={funcionario.cpf} onChange={handleChange}/>
 
             <p className="tituloInput">CEP</p>
-            <input className="Input" type="text" name="cep" id="cep" placeholder="ex: 69084-418" onChange={handleChange} />
+            <input className="Input" type="text" name="cep" id="cep" placeholder="ex: 69084-418" value={funcionario.cep} onChange={handleChange} />
 
             <p className="tituloInput">Função</p>
-            <select className='Input' name='funcao' onChange={handleChange} defaultValue="RECEPCIONISTA">
+            <select className='Input' name='funcao' onChange={handleChange} value={funcionario.funcao} defaultValue="RECEPCIONISTA">
               <option>RECEPCIONISTA</option>
               <option>BARBEIRO</option>
               <option>ZELADOR</option>
             </select>
             {/*<input className="Input" type="text" name="funcao" id="funcao" placeholder="ex: Barbeiro" />*/}
             <p className="tituloInput">Celular</p>
-            <input className="Input" type="text" name="telefone" id="telefone" placeholder="ex: (92) 9999-99999" onChange={handleChange} />
+            <input className="Input" type="text" name="telefone" id="telefone" value={funcionario.nome}  placeholder="ex: (92) 9999-99999" onChange={handleChange} />
             </div>
          
           <div className='segundadiv'>
           <p className="tituloInput">Unidade</p>
-          <select className='Input' value={formData.unidade} onChange={handleChange} name='unidade'>
+          <select className='Input' value={funcionario.unidade} onChange={handleChange} name='unidade'>
                 {
                   formData.map((unidades,index)=>{
                     return(
@@ -193,20 +193,20 @@ function Cadastrofunci() {
             {/*<input className="Input" type="text" name="unidade" id="unidade" placeholder="ex: Centro" />*/}
 
             <p className="tituloInput">Imagem</p>
-            <input className="Input" type="text" name="imagem" id="imagem" placeholder="ex: ......" onChange={handleChange}/>
+            <input className="Input" type="text" name="imagem" id="imagem" placeholder="ex: ......" value={funcionario.imagem} onChange={handleChange}/>
 
             <p className="tituloInput">Descrição</p>
-            <input className="Input" type="text" name="descricao" id="descricao" placeholder="ex: Especialista em..." onChange={handleChange} />
+            <input className="Input" type="text" name="descricao" id="descricao" placeholder="ex: Especialista em..." value={funcionario.descricao} onChange={handleChange} />
 
             <p className="tituloInput">Facebook</p>
-            <input className="Input" type="text" name="face" id="face" placeholder="ex: Jose Medeiros" onChange={handleChange}/>
+            <input className="Input" type="text" name="face" id="face" placeholder="ex: Jose Medeiros" value={funcionario.face} onChange={handleChange}/>
 
 
             <p className="tituloInput">Twitter</p>
-            <input className="Input" type="text" name="twitter" id="twitter" placeholder="ex: @jose" onChange={handleChange}/>
+            <input className="Input" type="text" name="twitter" id="twitter" placeholder="ex: @jose" value={funcionario.twitter} onChange={handleChange}/>
 
             <p className="tituloInput">Instagram</p>
-            <input className="Input" type="text" name="instagram" id="instagram" placeholder="ex: @jose_" onChange={handleChange}/>
+            <input className="Input" type="text" name="instagram" id="instagram" placeholder="ex: @jose_" value={funcionario.instagram} onChange={handleChange}/>
 
             <input className="confirmaCadastro" type="submit" value="Cadastrar" name='salvar' />
           </div>
