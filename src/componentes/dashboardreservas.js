@@ -15,7 +15,7 @@ function DashboardReservas() {
     
     {
       name: 'Cliente',
-      selector: 'Cliente',
+      selector: 'cliente',
       sortable: true
     },
     {
