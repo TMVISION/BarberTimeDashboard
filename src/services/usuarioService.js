@@ -12,7 +12,7 @@ var usuarioService = {
   // método para validar o login do usuário
   loginUsuario: async (user) => {
     console.log(user)
-    var usuarioAPI = axios.post(`https://barbertimeapi.vercel.app/users/login`, user);
+    var usuarioAPI = axios.post(`https://barbertimeapi.vercel.app/users/logindash`, user);
     return await usuarioAPI;
   },
 
