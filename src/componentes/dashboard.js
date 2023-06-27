@@ -20,12 +20,12 @@ function Dashboard() {
     },
     {
       name: 'CPF',
-      selector: 'CPF',
+      selector: 'cpf',
       sortable: true
     },
     {
       name: 'CEP',
-      selector: 'CEP',
+      selector: 'cep',
       sortable: true
     },
     {
@@ -36,7 +36,7 @@ function Dashboard() {
 
     {
       name: 'Celular',
-      selector: 'tel',
+      selector: 'telefone',
       sortable: true
     },
 

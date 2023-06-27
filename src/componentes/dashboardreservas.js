@@ -203,7 +203,6 @@ function DashboardReservas() {
         <DataTable
           columns={columns}
           data={tableData}
-          selectableRows
           fixedHeader
           pagination
         />

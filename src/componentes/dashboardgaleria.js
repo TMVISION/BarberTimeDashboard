@@ -107,7 +107,6 @@ function DashboardGaleria() {
         <DataTable
           columns={columns}
           data={tableData}
-          selectableRows
           fixedHeader
           pagination
         />

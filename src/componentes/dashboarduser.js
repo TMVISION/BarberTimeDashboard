@@ -120,7 +120,6 @@ function DashboardUser() {
         <DataTable
           columns={columns}
           data={tableData}
-          selectableRows
           fixedHeader
           pagination
         />

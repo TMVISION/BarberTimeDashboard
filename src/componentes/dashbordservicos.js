@@ -127,7 +127,7 @@ function Dashboardservicos() {
         <DataTable
           columns={columns}
           data={tableData}
-          selectableRows
+          
           fixedHeader
           pagination
         />
