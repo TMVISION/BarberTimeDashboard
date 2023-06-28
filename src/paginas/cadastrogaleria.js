@@ -5,10 +5,35 @@ import Logo from '../imgs/logo preta.png';
 import GaleriasService from '../services/galeriaService';
 function CadastroGaleria() {
 
+
+  const history = useNavigate();
+
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  const storedId = getCookie('id');
+  useEffect(() => {
+    if (storedId < 0 || storedId === null || storedId === undefined) {
+      
+      history('/login');
+      alert("Faça login");
+    }
+  }, [storedId, history]);
+
+
   const { id } = useParams();
 
   const [galeria, setFormData] = useState({});
-  const history = useNavigate();
+
 
   useEffect(() => {
 

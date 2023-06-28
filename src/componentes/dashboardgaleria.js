@@ -2,9 +2,33 @@ import React, { useState, useEffect } from 'react';
 import DataTable from 'react-data-table-component';
 import './stylesd.css'
 import GaleriasService from '../services/galeriaService';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 function DashboardGaleria() {
+
+  const history = useNavigate();
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  const storedId = getCookie('id');
+  useEffect(() => {
+    if (storedId < 0 || storedId === null || storedId === undefined) {
+      
+      history('/login');
+      alert("Faça login");
+    }
+  }, [storedId, history]);
+
+
   const columns = [
     {
       name: 'Nome',

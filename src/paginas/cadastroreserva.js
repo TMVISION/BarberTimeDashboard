@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './styles.css';
 import Logo from '../imgs/logo preta.png';
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import reservasService from "../services/reservasService";
 import barbeirosService from "../services/barbeirosService";
 import unidadesService from "../services/unidadesService";
@@ -10,6 +10,29 @@ import servicosService from "../services/servicosService";
 
 function CadastroReserva() {
  
+  const history = useNavigate();
+
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  const storedId = getCookie('id');
+  useEffect(() => {
+    if (storedId < 0 || storedId === null || storedId === undefined) {
+      
+      history('/login');
+      alert("Faça login");
+    }
+  }, [storedId, history]);
+
 
   const { id } = useParams();
   const [reserva, setFormData] = useState({});

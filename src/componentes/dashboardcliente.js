@@ -3,13 +3,33 @@ import DataTable from 'react-data-table-component';
 import './stylesd.css'
 import clientesService from '../services/clienteService';
 import { tab } from '@testing-library/user-event/dist/tab';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import usuarioService from '../services/usuarioService';
 
 function Dashboardcliente() {
 
 
+  const history = useNavigate();
 
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  const storedId = getCookie('id');
+  useEffect(() => {
+    if (storedId < 0 || storedId === null || storedId === undefined) {
+      
+      history('/login');
+      alert("Faça login");
+    }
+  }, [storedId, history]);
 
   const [tableData, setTableData] = useState([]);
 

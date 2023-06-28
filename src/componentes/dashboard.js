@@ -1,12 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import DataTable from 'react-data-table-component';
 import './stylesd.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import usuarioService from '../services/usuarioService';
 
 import barbeirosService from '../services/barbeirosService';
 
 function Dashboard() {
+  const history = useNavigate();
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  }
+
+  const storedId = getCookie('id');
+
   const columns = [
     {
       name: 'Nome',
@@ -112,7 +127,13 @@ function Dashboard() {
     },
   ];
 
- 
+   useEffect(() => {
+    if (storedId < 0 || storedId === null || storedId === undefined) {
+      
+      history('/login');
+      alert("Faça login");
+    }
+  }, [storedId, history]);
 
 
  /*<div>
